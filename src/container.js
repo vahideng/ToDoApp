@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Person from "./Person/Person";
 import "./container.css";
-
+import "./Person.css";
 class items extends Component {
   state = {
     noteText: " ",
@@ -14,9 +14,13 @@ class items extends Component {
 
   toDoAdd = () => {
     if (this.state.noteText === " ") return;
-    const newArr = this.state.note;
+    const newArr = [...this.state.note];
+    console.log(newArr);
+
     newArr.push(this.state.noteText);
-    this.setState({ noteText: "" });
+    console.log(newArr, "dovomi");
+
+    this.setState({ noteText: "", note: newArr });
   };
 
   deleteHandler = key => {
@@ -25,12 +29,16 @@ class items extends Component {
     this.setState({ note: list });
   };
 
+  toDos =()  => { 
+    console.log(1);
+    
+    return this.state.note.map((val, key) => {
+    return (
+      <Person key={key} text={val} delete={() => this.deleteHandler(key)} />
+    );
+  })}
+
   render() {
-    let notes = this.state.note.map((val, key) => {
-      return (
-        <Person key={key} text={val} delete={() => this.deleteHandler(key)} />
-      );
-    });
     return (
       <div className={"Wrapper"}>
         React ToDo Application
@@ -43,7 +51,11 @@ class items extends Component {
         <button className={"Button"} type="submit" onClick={this.toDoAdd}>
           Add
         </button>
-        {notes}
+        <div className={"Person"}>
+          <ul>
+               {this.toDos()}
+          </ul>
+        </div>
       </div>
     );
   }
