@@ -1,0 +1,36 @@
+.Wrapper {
+    font-family: 'Lato', sans-serif;
+    background: #8E0E00;
+    background: linear-gradient(to right, #1F1C18, #8E0E00);
+    background: -webkit-linear-gradient(to right, #1F1C18, #8E0E00);
+    color: aliceblue;
+    padding: 20px;
+    margin: 20px;
+}
+
+.Button {
+    padding: 20px;
+    margin: 0 0.1em 0.1em 0;
+    border: 0.16em solid rgba(255, 255, 255, 0);
+    display: inline-block;
+    box-sizing: border-box;
+    text-align: center;
+    align-content: center;
+    padding: 10px;
+    margin: 20px;
+    cursor: pointer;
+    box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.8);
+    -webkit-box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.8);
+    transition: transform .06s ease;
+}
+
+.Button:hover {
+    transform: scale(1.2);
+}
+.TextInput{
+    padding: 20px;
+    margin: 20px;
+    font: bolder;
+    font-size: 20px;
+}
