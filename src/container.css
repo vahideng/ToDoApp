@@ -1,34 +1,96 @@
-.Wrapper {
-    font-family: 'Lato', sans-serif;
-    background: #8E0E00;
-    background: linear-gradient(to right, #1F1C18, #8E0E00);
-    background: -webkit-linear-gradient(to right, #1F1C18, #8E0E00);
-    color: aliceblue;
-    padding: 20px;
-    margin: 20px;
+nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    list-style-type: none;
+    width: 100%;
 }
 
-.Button {
-    padding: 20px;
-    margin: 0 0.1em 0.1em 0;
-    border: 0.16em solid rgba(255, 255, 255, 0);
-    display: inline-block;
-    box-sizing: border-box;
+nav a {
+    float: left;;
+    color: white;
     text-align: center;
-    align-content: center;
+    padding: 14px 16px;
+    text-decoration: none;
     cursor: pointer;
-    box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.8);
-    -webkit-box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.8);
-    -moz-box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.8);
-    transition: transform .06s ease;
+    border-right: 1px solid white;
 }
 
-.Button:hover {
-    transform: scale(1.2);
+.active{
+  background-color: cadetblue;
 }
-.TextInput{
-    padding: 20px;
-    margin: 20px;
-    font: bolder;
+nav a:hover:not(.active) {
+    background-color: black;
+}
+
+.float-right{
+ float: right;
+
+}
+
+.Wrapper {
+    
+    color: aliceblue;
     font-size: 20px;
+    padding: 10px;
+    margin-top: 1%;
+
 }
+
+
+
+.input-class {
+    box-sizing: border-box;
+      width: 30%;
+      height: 30px;
+      font-size: 1em;
+      margin: 10px;
+      border-radius: 4px;
+      transition: width 0.4s ease-in-out;
+  }
+  .input-class:focus{
+    width: 60%;
+  }
+  .button-class {
+    clear: both;
+      width: 10%;
+      height: 40px;
+      margin-top:20px;
+      background-color :#333;
+      color:white;
+      border-radius:3em;
+      
+  }
+  .button-class:hover {
+  
+    background-color: cadetblue;
+  }
+  
+  .Person{
+      
+      text-align: center;
+     
+  }
+  li {
+    margin: 30px auto auto auto;
+    text-transform: capitalize;
+     font-size: 20px;
+    padding-top: 1%;
+      width: 400px;
+      height: 30px;
+      list-style-type: none;
+      background-color:#333;
+      border-radius: 4px;
+      cursor: pointer;
+      color: aliceblue;
+
+  }
+  li:hover{
+
+    background-color:black;
+    color:wheat;
+    
+
+  }
